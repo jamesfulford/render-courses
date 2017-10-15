@@ -1,0 +1,160 @@
+/* Classes.css */
+
+/* Bigger Structures */
+.header {
+    margin: 0px auto;
+    width: 800px;
+    text-align: center;
+    background: #4CAF50;
+}
+h2 {
+    font-size: 24px;
+    font-weight: normal;
+}
+.selector { /* div containing all the filtering components */
+    margin: auto;
+    padding-top: 5px;
+    padding-bottom: 10px;
+    text-align: center;
+    width: 800px;
+    background: #F0F0F0;
+}
+table {
+    margin: auto;
+    width: 800px;
+    border-collapse: collapse;
+    border: 1px solid black;
+    overflow: hidden;
+    table-layout: fixed;
+}
+
+
+/* Table Rows */
+tr {
+    width: 800px;
+    border-top: 1px solid black;
+    box-sizing: border-box;
+}
+.progress {  /* Progress bars */
+    position: absolute;
+    margin:0px;
+    padding:0px;
+    left:0px;
+    top: 0px;
+    border-spacing: 0px;
+    height: inherit;
+    z-index: -1; /* puts it behind something...? */
+    background: #4CAF50;
+}
+.online {  /* Table Rows of online classes */
+    background: orange;
+}
+
+
+/* Table Fields */
+td, th {
+    text-align: center;
+    position: relative;
+    padding: 0px;
+    height: 35px;
+
+}
+.content {
+    width: 100%;
+    height: 35px;
+    overflow: hidden;
+    line-height: 1;
+}
+.crn-cell { width: 75px;}
+.code-cell { width: 116px;}
+.title-cell { width: 327px; text-align:left;}
+.section-cell { width: 60px;}
+.days-cell { width: 60px;}
+.time-cell { width: 120px;}
+.seats-cell { width: 40px;}
+
+/* Filtering Compnents */
+.filter {
+    display: inline-block;
+    vertical-align: bottom;
+    margin: 0 auto;
+}
+#department-selector-div{ width: 12%;}
+#search-bar-div{ width: 48%;}
+#format-div{ width: 15%; text-align: left;}
+#full-classes-div{ width:23%;}
+select { width: 100%;}
+#search-bar {width: 100%;}
+#format-radio {text-align: left;}
+
+
+/* Responsive CSS */
+@media only screen and (max-width : 420px) { /* Portrait smartphones */
+    /* Making sure crn-cell:table ratio is constant for progress bars*/
+    td, th { font-size: 12px;}
+    .header{width: 320px;}
+    .selector{width:320px;}
+    table {width:320px;}
+    tr {width:320px;}
+
+    .crn-cell { width: 31px;}
+    .code-cell { width: 40px;}
+    .title-cell { width: 125px;}
+    .days-cell { width: 40px;}
+    .time-cell { width: 83px;}
+
+    /* Handle less filters at the top */
+    #format-div{ display: none;}
+    #full-classes-div{ display: none;}
+    #department-selector-div{ width: 33%;}
+    #search-bar-div{ width: 65%;}
+
+    /* Less columns */
+    .section-cell{display:none;}
+    .seats-cell{display:none;}
+}
+
+@media only screen and (min-width : 421px) and ( max-width: 620px){ /* Larger or landscape smartphones */
+    /* Making sure crn-cell:table ratio is constant for progress bars*/
+    td, th { font-size: 14px;}
+    .header{width: 405px;}
+    .selector{width:405px;}
+    table {width:405px;}
+    tr {width:405px;}
+
+    .crn-cell { width: 39px;}
+    .code-cell { width: 50px;}
+    .title-cell { width: 162px;}
+    .days-cell { width: 50px;}
+    .time-cell { width: 104px;}
+
+    /* Handle less filters at the top */
+    #format-div{ display: none;}
+    #full-classes-div{ display: none;}
+    #department-selector-div{ width: 33%;}
+    #search-bar-div{ width: 65%;}
+
+    /* Less columns */
+    .section-cell{display:none;}
+    .seats-cell{display:none;}
+}
+
+@media only screen and (min-width : 621px) and ( max-width: 820px){ /* Portrait IPad */
+    /* Making sure crn-cell:table ratio is constant for progress bars*/
+    .header{width: 607px;}
+    .selector{width:607px;}
+    table {width:607px;}
+    tr {width:607px;}
+
+    .crn-cell { width: 58px;}
+    .code-cell { width: 78px;}
+    .title-cell { width: 215px;}
+    .section-cell{ width:55px;}
+    .days-cell { width: 53px;}
+    .time-cell { width: 111px;}
+    .seats-cell{ width: 36px;}
+
+    /* Special filter proportions */
+    #department-selector-div{ width: 15%;}
+    #search-bar-div{ width: 45%;}
+}
